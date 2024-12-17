@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRAVEL WEB LANDING PAGE</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        /* Body with background gradient */
+        body {
+            background: linear-gradient(to bottom right, #f0f4f8, rgba(33, 150, 243, 0.3));
+            overflow: hidden;
+        }
+
+        .landing {
+            background-image: url('https://img.freepik.com/free-photo/full-shot-travel-concept-with-landmarks_23-2149153258.jpg?t=st=1734325568~exp=1734329168~hmac=34e0e5ee255deb14ba463b94cd840b411f50332f09f9dd8e696b90401d556683&w=1060');
+            background-size: cover;
+            height: 100vh;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            isolation: isolate;
+        }
+
+        /* Overlay effect using hsla */
+        .landing::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: hsla(210, 60%, 10%, 0.4); /* Dark overlay */
+            z-index: -1;
+        }
+
+        /* Header Styles */
+        .landing h1 {
+            font-size: 3.5rem;
+            color: #ffeb3b; /* Hex yellow for contrast */
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+            margin-bottom: 15px;
+        }
+
+        .landing p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9); /* Light rgba white */
+            margin-bottom: 25px;
+        }
+
+        /* Button Styles */
+        button {
+            height: 40px;
+            width: 130px;
+            font-size: 1rem;
+            color: rgb(255, 255, 255);
+            background-color: rgb(34, 150, 243); /* Blue */
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            background-color: hsla(34, 90%, 58%, 0.8); /* HSLA Orange */
+            color: #212121;
+        }
+    </style>
+</head>
+<body>
+    <header class="landing">
+        <h1>EXPLORE THE WORLD!</h1>
+        <p>Plan your next adventure with our curated destinations</p>
+        <button>READY!</button>
+    </header>
+</body>
+</html>
