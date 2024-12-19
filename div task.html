@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Div</title>
+    <style>
+        /* body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        } */
+
+        .centered-div {
+            width: 80%;
+            height: 50vh;
+            margin: auto;
+            background-color: lightgray;
+            padding: 20px;
+            border-radius: 10px;
+            transition: width 0.3s ease, height 0.3s ease;
+        }
+
+        .centered-div:hover {
+            width: 90%;
+            height: 40vh;
+            
+        }
+
+        .centered-div h1 {
+            font-size: 2rem;
+        }
+
+        .centered-div p {
+            font-size: 1.2em;
+        }
+
+        .centered-div button {
+            padding: 10px 45px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .centered-div button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="centered-div">
+        <h1>Welcome</h1>
+        <p>This is a centered div with a heading, a paragraph, and a button.</p>
+        <button>Click Me</button>
+    </div>
+</body>
+</html>
