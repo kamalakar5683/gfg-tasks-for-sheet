@@ -3,62 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TRAVEL WEB LANDING PAGE</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>Travel Web Landing Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Navbar Style */
+        nav {
+            background-color: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            padding: 10px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: rgb(229, 225, 226);
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: rgb(234, 40, 195);
+        }
+
+        /* Landing Section Style */
+        .landing {
+            background-image: url(https://img.freepik.com/free-photo/full-shot-travel-concept-with-landmarks_23-2149153258.jpg);
+            background-size: cover;
+            height: 100vh;
+            background-position: center;
+            padding-top: calc(250px + 50px);
+        }
+
+        .landing h1 {
+            color: white;
+            text-align: center;
+            font-size: 45px;
+        }
+
+        .landing p {
+            color: rgb(11, 100, 63);
+            text-align: center;
+            font-family: 'Trebuchet MS', Arial, sans-serif;
+        }
+
+        button {
+            margin-top: 10px;
+            margin-left: 45%;
+            height: 35px;
+            width: 110px;
+            cursor: pointer;
+            border-radius: 25px;
+            background-color: rgb(203, 213, 253);
+            transition: transform .2s;
+        }
+
+        button:hover {
+            transition: 0.1s;
+            transform: scale(1.2);
+            background-color: antiquewhite;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        footer p, footer a {
+            margin: 10px 0;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: rgb(234, 40, 195);
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: rgb(0, 128, 255);
+        }
+
+        .sec3 {
+    background-color: #f4f4f9; /* Light grayish color */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 10%;
+}
+
+
+        .sec3 .card {
+            flex: 1 1 calc(25% - 30px);
+            max-width: calc(25% - 30px);
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            margin: 15px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .sec3 .card:hover {
+            transform: scale(1.05);
+        }
+
+        .sec3 .card img {
+    width: 100%;
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* Ensures the image covers the area without distorting */
+}
+
+        .sec3 .card h3 {
+            font-size: 20px;
+            margin: 15px 0;
+            color: rgb(34, 34, 34);
+        }
+
+        .sec3 .card p {
+            font-size: 16px;
+            color: rgb(60, 60, 60);
+            padding: 0 10px 15px;
+        }
+    </style>
 </head>
-<style>
-    *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.landing{
-    background-image: url(https://img.freepik.com/free-photo/full-shot-travel-concept-with-landmarks_23-2149153258.jpg?t=st=1734325568~exp=1734329168~hmac=34e0e5ee255deb14ba463b94cd840b411f50332f09f9dd8e696b90401d556683&w=1060);
-    background-size: cover;
-    height: 100vh;
-    background-position: center;
-    padding-top: 250px;
-
-}
-
-.landing h1{
-    color: white;
-    text-align: center;
-    font-size: 45px;
-   
-}
-
-.landing p{
-    color: rgb(11, 100, 63);
-    text-align: center;
-    
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-button{
-    margin-top: 10px;
-    margin-left: 45%;
-    height: 35px ;
-    width: 110px;
-    cursor: pointer;
-    border-radius: 25px;
-    background-color: rgb(210, 214, 230);
-    transition: transform .2s
-
-}
-button:hover{
-    transition: 0.1;
-    transform: scale(1.2);
-    background-color: antiquewhite;
-}
-
-</style>
 <body>
-   <header class="landing">
-    <h1>EXPLORE THE WORLD!</h1>
-    <p>plan your next adventure with our curated  destination</p>
-    <button>READY!</button>
-   </header>
-</body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#" data-aos="fade-up">Home</a></li>
+            <li><a href="#" data-aos="fade-down">Popular Destinations</a></li>
+            <li><a href="#" data-aos="fade-up">Testimonials</a></li>
+            <li><a href="#" data-aos="fade-down">Contact</a></li>
+        </ul>
+    </nav>
 
+    <!-- Landing Section -->
+    <section class="landing" data-aos="flip-right">
+        <h1 data-aos="fade-left">EXPLORE THE WORLD!</h1>
+        <p data-aos="fade-down-right">Plan your next adventure with our curated destinations</p>
+        <button data-aos="zoom-in">READY!</button>
+    </section>
+
+    <!-- Additional Image Cards Section -->
+    <section class="sec3">
+        <div class="card" data-aos="fade-up">
+            <img src="https://img.freepik.com/free-photo/young-blonde-woman-sitting-top-hill_273609-15293.jpg?t=st=1734672263~exp=1734675863~hmac=e14e5fcfe4b25c2dc5c68d9ba7d9df8fade97b954ffed77bd687fd89c05eeefd&w=996" alt="Adventure in the Skies">
+            <h3>Adventure in the Skies</h3>
+            <p>Experience the thrill of flying and enjoy unparalleled views of stunning landscapes.</p>
+        </div>
+
+        <div class="card" data-aos="fade-down">
+            <img src="https://img.freepik.com/free-photo/couple-ladies-are-enjoying-their-trip-sailing-boat-while-drinking-wine-watching-beautiful-sunset_613910-3266.jpg?t=st=1734672409~exp=1734676009~hmac=fc925d30e9796266b08329ec6485895fda97add61bdf557a3f2951dca59d93a4&w=996" alt="Sailing Serenity">
+            <h3>Sailing Serenity</h3>
+            <p>Set sail on crystal-clear waters and embrace the tranquility of the ocean.</p>
+        </div>
+
+        <div class="card" data-aos="fade-up">
+            <img src="https://img.freepik.com/free-photo/mountain-landscape-with-hikers_1232-4564.jpg" alt="Mountain Adventures">
+            <h3>Mountain Adventures</h3>
+            <p>Conquer majestic peaks and immerse yourself in breathtaking wilderness.</p>
+        </div>
+
+        <div class="card" data-aos="fade-down">
+            <img src="https://img.freepik.com/free-photo/hot-beautiful-woman-colorful-sunhat-dress-walking-near-beach-ocean-hot-summer-day-near-palm_158538-3037.jpg?t=st=1734672561~exp=1734676161~hmac=d52a4dec53f71f4f9638ec72986a4f053d7af4a99e9452c97fafdd0f356294ff&w=360" alt="Tropical Escapes">
+            <h3>Tropical Escapes</h3>
+            <p>Relax on pristine beaches and soak in the sun on your tropical getaway.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Travel Web. Your gateway to unforgettable journeys.</p>
+        <p>Follow us on <a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="#">Twitter</a></p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a></p>
+    </footer>
+
+    <!-- AOS Initialization Script -->
+    <script>
+        AOS.init();
+    </script>
+</body>
 </html>
